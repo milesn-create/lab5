@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Construct - Собрать ланч</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Food Construct</h1>
+            <nav>
+                <a href="index.html">О нас</a>
+                <a href="lunch.html" id="active">Собрать ланч</a>
+                <a href="#orders">Заказы</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="lunch-container">
+        <!-- Секция выбора блюд -->
+        <section class="dishes-section">
+            <!-- Супы -->
+            <div id="soup-section" class="category-section">
+                <h2>Выберите суп</h2>
+                <div class="filters" id="soup-filters">
+                    <button class="filter-btn active" data-kind="all">Все</button>
+                    <button class="filter-btn" data-kind="fish">рыбный</button>
+                    <button class="filter-btn" data-kind="meat">мясной</button>
+                    <button class="filter-btn" data-kind="veg">вегетарианский</button>
+                </div>
+                <div class="dishes-grid" id="soup-dishes">
+                    <!-- Блюда будут добавлены через JavaScript -->
+                </div>
+            </div>
+
+            <!-- Главные блюда -->
+            <div id="main-section" class="category-section">
+                <h2>Выберите главное блюдо</h2>
+                <div class="filters" id="main-filters">
+                    <button class="filter-btn active" data-kind="all">Все</button>
+                    <button class="filter-btn" data-kind="fish">рыбное</button>
+                    <button class="filter-btn" data-kind="meat">мясное</button>
+                    <button class="filter-btn" data-kind="veg">вегетарианское</button>
+                </div>
+                <div class="dishes-grid" id="main-dishes">
+                    <!-- Блюда будут добавлены через JavaScript -->
+                </div>
+            </div>
+
+            <!-- Салаты и стартеры -->
+            <div id="salad-section" class="category-section">
+                <h2>Выберите салат или стартер</h2>
+                <div class="filters" id="salad-filters">
+                    <button class="filter-btn active" data-kind="all">Все</button>
+                    <button class="filter-btn" data-kind="fish">рыбный</button>
+                    <button class="filter-btn" data-kind="meat">мясной</button>
+                    <button class="filter-btn" data-kind="veg">вегетарианский</button>
+                </div>
+                <div class="dishes-grid" id="salad-dishes">
+                    <!-- Блюда будут добавлены через JavaScript -->
+                </div>
+            </div>
+
+            <!-- Напитки -->
+            <div id="drink-section" class="category-section">
+                <h2>Выберите напиток</h2>
+                <div class="filters" id="drink-filters">
+                    <button class="filter-btn active" data-kind="all">Все</button>
+                    <button class="filter-btn" data-kind="cold">холодный</button>
+                    <button class="filter-btn" data-kind="hot">горячий</button>
+                </div>
+                <div class="dishes-grid" id="drink-dishes">
+                    <!-- Блюда будут добавлены через JavaScript -->
+                </div>
+            </div>
+
+            <!-- Десерты -->
+            <div id="dessert-section" class="category-section">
+                <h2>Выберите десерт</h2>
+                <div class="filters" id="dessert-filters">
+                    <button class="filter-btn active" data-kind="all">Все</button>
+                    <button class="filter-btn" data-kind="small">маленькая порция</button>
+                    <button class="filter-btn" data-kind="medium">средняя порция</button>
+                    <button class="filter-btn" data-kind="large">большая порция</button>
+                </div>
+                <div class="dishes-grid" id="dessert-dishes">
+                    <!-- Блюда будут добавлены через JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция заказа -->
+        <section id="order-summary">
+            <h2>Сделать заказ</h2>
+            <div id="order-items">
+                <div class="empty-order">Ничего не выбрано</div>
+            </div>
+            <div id="total-section" style="display: none;">
+                <hr>
+                <div class="total-price">
+                    <strong>Стоимость заказа:</strong>
+                    <span id="total-price">0</span>₽
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Форма заказа -->
+    <section id="order-form">
+        <h2>Оформить заказ</h2>
+        <form action="https://httpbin.org/post" method="POST">
+            <div class="order-details">
+                <h3>Ваш заказ</h3>
+                <label for="soup">Суп:</label>
+                <select name="soup" id="soup" required>
+                    <option value="">Выберите суп</option>
+                    <option value="tomato">Томатный суп</option>
+                    <option value="mushroom">Грибной крем-суп</option>
+                    <option value="chicken-noodle">Куриная лапша</option>
+                </select>
+
+                <label for="main-dish">Главное блюдо:</label>
+                <select name="main-dish" id="main-dish" required>
+                    <option value="">Выберите блюдо</option>
+                    <option value="lasagna">Лазанья с мясом</option>
+                    <option value="carbonara">Паста карбонара</option>
+                    <option value="fried-potatoes">Жареная картошка с грибами</option>
+                    <option value="chicken-cutlets">Котлеты из курицы с пюре</option>
+                </select>
+
+                <label for="drink">Напиток:</label>
+                <select name="drink" id="drink" required>
+                    <option value="">Выберите напиток</option>
+                    <option value="berry-mors">Морс ягодный</option>
+                    <option value="orange-juice">Сок апельсиновый</option>
+                    <option value="black-tea">Чай черный</option>
+                </select>
+
+                <label for="comment">Комментарий:</label>
+                <textarea name="comment" id="comment" rows="4"></textarea>
+            </div>
+
+            <div class="customer-info">
+                <h3>Ваши данные</h3>
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- Чекбокс уведомлений -->
+                <label><input type="checkbox" name="discounts"> Получать уведомления о скидках и акциях</label>
+
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="address">Адрес:</label>
+                <input type="text" id="address" name="address" required>
+                <p class="note">(Доставка осуществляется только по Москве)</p>
+
+                <p>Время доставки:</p>
+                <label><input type="radio" name="delivery-option" value="asap" required> Как можно скорее</label>
+                <label><input type="radio" name="delivery-option" value="by-time"> Ко времени</label>
+
+           
+                <label for="exact-time">Указать время:</label>
+                <input type="time" id="exact-time" name="exact-time" min="07:00" max="23:00" step="300">
+                <p class="note">(Доставка осуществляется с 7:00 до 23:00)</p>
+
+                <div class="form-buttons">
+                    <button type="reset">Сбросить</button>
+                    <button type="submit">Отправить</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    
+    <footer id="contacts">
+        <p>Позвонить нам: <a href="tel:+70000000000">+7-000-000-00-00</a></p>
+        <p>Email: <a href="mailto:info@foodconstruct.ru">info@foodconstruct.ru</a></p>
+        <p>© 2023 Food Construct. Все права защищены.</p>
+    </footer>
+
+    <!-- Подключаем скрипты -->
+    <script src="dishes.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
