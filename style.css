@@ -1,612 +1,706 @@
-/* ===== БАЗОВЫЕ СТИЛИ ===== */
-/* Сброс стандартных отступов и использование border-box для всех элементов */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    /* ===== БАЗОВЫЕ СТИЛИ ===== */
+    /* Сброс стандартных отступов и использование border-box для всех элементов */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-/* Основные стили страницы */
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+    /* Основные стили страницы */
+    body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f9f9f9;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 
-/* ===== ШАПКА САЙТА ===== */
-/* Стили для верхней части страницы */
-header {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+    /* ===== ШАПКА САЙТА ===== */
+    /* Стили для верхней части страницы */
+    header {
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
 
-/* Контейнер для содержимого шапки */
-.header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
+    /* Контейнер для содержимого шапки */
+    .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 
-/* Заголовок сайта */
-h1 {
-    color: #e74c3c;
-    font-size: 2.5rem;
-    text-align: center;
-}
+    /* Заголовок сайта */
+    h1 {
+        color: #e74c3c;
+        font-size: 2.5rem;
+        text-align: center;
+    }
 
-/* ===== НАВИГАЦИЯ ДЛЯ ДЕСКТОПА ===== */
-/* Основной контейнер навигации - горизонтальный для десктопа */
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    width: 100%;
-}
+    /* ===== НАВИГАЦИЯ ДЛЯ ДЕСКТОПА ===== */
+    /* Основной контейнер навигации - горизонтальный для десктопа */
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        width: 100%;
+    }
 
-/* Стили для ссылок навигации */
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: all 0.3s;
-    padding: 10px 20px;
-    border-radius: 4px;
-    white-space: nowrap;
-}
+    /* Стили для ссылок навигации */
+    nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: all 0.3s;
+        padding: 10px 20px;
+        border-radius: 4px;
+        white-space: nowrap;
+    }
 
-/* Эффект при наведении на ссылки */
-nav a:hover {
-    color: #e74c3c;
-    background-color: #f9f2f2;
-    transform: translateY(-2px);
-}
+    /* Эффект при наведении на ссылки */
+    nav a:hover {
+        color: #e74c3c;
+        background-color: #f9f2f2;
+        transform: translateY(-2px);
+    }
 
-/* Стиль для активной ссылки */
-#active {
-    color: tomato;
-    background-color: #fff0f0;
-}
+    /* Стиль для активной ссылки */
+    #active {
+        color: tomato;
+        background-color: #fff0f0;
+    }
 
-/* ===== ОСНОВНОЕ СОДЕРЖИМОЕ ===== */
-/* Главная область контента */
-main {
-    flex: 1;
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 0 20px;
-    width: 100%;
-}
+    /* ===== ОСНОВНОЕ СОДЕРЖИМОЕ ===== */
+    /* Главная область контента */
+    main {
+        flex: 1;
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 0 20px;
+        width: 100%;
+    }
 
-/* Стили для секций */
-section {
+    /* Стили для секций */
+    section {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    /* Заголовки секций */
+    h2 {
+        color: #e74c3c;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    /* Основной текст */
+    p {
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+
+    /* ===== СЕКЦИЯ "О НАС" ===== */
+    /* Контейнер для контента о компании */
+    .about-content {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    /* Изображение в секции "О нас" */
+    .about-image {
+        width: 500px;
+        height: 300px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    /* ===== СПИСОК ПРЕИМУЩЕСТВ ===== */
+    /* Стили для списка преимуществ */
+    .advantages-list {
+        list-style-type: none;
+        padding-left: 20px;
+    }
+
+    /* Элементы списка преимуществ */
+    .advantages-list li {
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 25px;
+        font-size: 1.1rem;
+    }
+
+    /* Галочка перед элементами списка */
+    .advantages-list li:before {
+        content: "✓";
+        color: #27ae60;
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+
+    /* ===== ТАБЛИЦЫ ===== */
+    /* Стили для таблиц */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    /* Ячейки таблицы */
+    th, td {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    /* Заголовки таблицы */
+    th {
+        background-color: #f2f2f2;
+        font-weight: 700;
+    }
+
+    /* Чередование цветов строк */
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    /* ===== СЕТКА БЛЮД ===== */
+    /* Контейнер сетки для карточек блюд */
+    .dishes-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    /* Карточка отдельного блюда */
+    .dish-card {
+        background-color: #fff;
+        padding: 30px 40px;
+        border-radius: 35px;
+        cursor: pointer;
+        filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+    }
+
+    /* Эффект при наведении на карточку */
+    .dish-card:hover {
+        border: 2px solid tomato;
+        transform: translateY(-5px);
+    }
+
+    /* Эффект для кнопки при наведении на карточку */
+    .dish-card:hover button {
+        background-color: #e74c3c;
+        color: white;
+    }
+
+    /* Изображение блюда */
+    .dish-image {
+        width: 100%;
+        border-radius: 35px;
+        margin-bottom: 15px;
+    }
+
+    /* Цена блюда */
+    .dish-price {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    /* Название блюда */
+    .dish-name {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+
+    /* Вес/объем блюда */
+    .dish-weight {
+        color: #777;
+        margin-bottom: 15px;
+    }
+
+    /* Кнопка добавления в заказ */
+    .add-button {
+        background-color: #f1eee9;
+        border: none;
+        padding: 10px 30px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: auto;
+        font-weight: 500;
+        transition: background-color 0.3s;
+    }
+
+    /* ===== ФОРМА ЗАКАЗА ===== */
+    /* Основной контейнер формы */
+    #order-form {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    /* Заголовок формы */
+    #order-form h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #000;
+    }
+
+    /* Расположение формы в две колонки */
+    #order-form form {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    /* Колонки формы */
+    .order-details, .customer-info {
+        flex: 1;
+    }
+
+    /* Заголовки секций формы */
+    .order-details h3,
+    .customer-info h3 {
+        margin-bottom: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #000;
+    }
+
+    /* Поля ввода формы */
+    #order-form label {
+        display: block;
+        margin-top: 12px;
+        margin-bottom: 5px;
+        font-size: 15px;
+        font-weight: normal;
+    }
+
+    /* Элементы формы */
+    #order-form input,
+    #order-form select,
+    #order-form textarea {
+        width: 100%;
+        padding: 6px;
+        border: 1px solid #000;
+        border-radius: 0;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    /* Текстовое поле */
+    #order-form textarea {
+        resize: none;
+        height: 80px;
+    }
+
+    /* Чекбоксы и радиокнопки */
+    #order-form input[type="checkbox"],
+    #order-form input[type="radio"] {
+        width: auto;
+        margin-right: 6px;
+    }
+
+    /* Текст подсказок */
+    #order-form .note {
+        font-size: 13px;
+        color: #777;
+        margin-top: 4px;
+    }
+
+    /* Контейнер для кнопок формы */
+    .form-buttons {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    /* Кнопки формы */
+    #order-form button {
+        padding: 6px 15px;
+        border: 1px solid #000;
+        background: #fff;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    /* Эффект при наведении на кнопки */
+    #order-form button:hover {
+        background: #f2f2f2;
+    }
+
+    /* ===== ПОДВАЛ САЙТА ===== */
+    footer {
+        background-color: black;
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
+        margin-top: auto;
+    }
+
+    /* Ссылки в подвале */
+    footer a {
+        color: #e74c3c;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    /* Эффект при наведении на ссылки в подвале */
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    /* Примечание о доставке */
+    .delivery-note {
+        display: block;
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 5px;
+        font-style: italic;
+    }
+
+    /* Эффект при наведении на примечание */
+    .dish-card:hover .delivery-note {
+        color: #e74c3c;
+    }
+
+    /* ===== СТИЛИ ДЛЯ ФИЛЬТРОВ ===== */
+    .filters {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        padding: 8px 16px;
+        border: 2px solid #e74c3c;
+        background-color: white;
+        color: #e74c3c;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover {
+        background-color: #fff0f0;
+        transform: translateY(-2px);
+    }
+
+    .filter-btn.active {
+        background-color: #e74c3c;
+        color: white;
+    }
+
+    /* ===== СТИЛИ ДЛЯ ЛАБОРАТОРНОЙ РАБОТЫ 4 ===== */
+
+    /* Контейнер для страницы ланча */
+    .lunch-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Секции категорий */
+    .category-section {
+        margin-bottom: 40px;
+    }
+
+    /* Выделение выбранной карточки */
+    .dish-card.selected {
+        border: 2px solid #e74c3c;
+        background-color: #fff0f0;
+        transform: translateY(-5px);
+    }
+
+    .dish-card.selected .add-button {
+        background-color: #e74c3c;
+        color: white;
+    }
+
+    /* Стили для корзины заказа */
+    #order-summary {
+        background: #f9f9f9;
+        padding: 25px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        border: 1px solid #ddd;
+    }
+
+    .order-item {
+        margin-bottom: 15px;
+        padding: 12px;
+        background: white;
+        border-radius: 8px;
+        border-left: 4px solid #e74c3c;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .order-item strong {
+        color: #333;
+        font-size: 1.1em;
+    }
+
+    .empty-order {
+        text-align: center;
+        color: #666;
+        font-style: italic;
+        padding: 30px;
+        font-size: 1.1em;
+    }
+
+    .total-price {
+        font-size: 1.3em;
+        font-weight: bold;
+        text-align: right;
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 2px solid #ddd;
+        color: #e74c3c;
+    }
+
+    /* ===== АДАПТИВНОСТЬ ДЛЯ ПЛАНШЕТОВ (800px и меньше) ===== */
+    @media (max-width: 800px) {
+        /* Сетка блюд - 2 колонки */
+        .dishes-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        /* Уменьшение изображения в секции "О нас" */
+        .about-image {
+            width: 400px;
+        }
+        
+        /* Форма в одну колонку */
+        #order-form form {
+            flex-direction: column;
+        }
+    }
+
+    /* ===== АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (768px и меньше) ===== */
+    @media (max-width: 800px) {
+        /* НАВИГАЦИЯ: горизонтальная становится вертикальной колонкой */
+        nav {
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            max-width: 250px;
+        }
+        
+        /* Ссылки занимают всю ширину контейнера */
+        nav a {
+            text-align: center;
+            padding: 12px 20px;
+            border: 1px solid #534b4b;
+            width: 100%;
+            white-space: normal;
+        }
+        
+        /* Эффект при наведении на мобильных */
+        nav a:hover {
+            background-color: #f9f2f2;
+            transform: none;
+        }
+    }
+
+    /* ===== АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (600px и меньше) ===== */
+    @media (max-width: 600px) {
+        /* Сетка блюд - 1 колонка */
+        .dishes-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        /* Вертикальное расположение контента "О нас" */
+        .about-content {
+            flex-direction: column;
+        }
+        
+        /* Полная ширина для изображения */
+        .about-image {
+            width: 100%;
+            height: auto;
+        }
+        
+        /* Уменьшение отступов секций */
+        section {
+            padding: 20px;
+        }
+        
+        /* Адаптация формы заказа */
+        #order-form {
+            margin: 20px auto;
+            padding: 15px;
+        }
+        
+        /* Навигация занимает всю доступную ширину */
+        nav {
+            max-width: 100%;
+        }
+
+        /* Адаптивность для фильтров */
+        .filters {
+            gap: 5px;
+        }
+        
+        .filter-btn {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+    }
+
+    /* ===== АДАПТИВНОСТЬ ДЛЯ МАЛЕНЬКИХ ЭКРАНОВ (400px и меньше) ===== */
+    @media (max-width: 400px) {
+        /* Уменьшение шрифта таблицы */
+        table {
+            font-size: 14px;
+        }
+        
+        /* Уменьшение отступов ячеек */
+        th, td {
+            padding: 8px 10px;
+        }
+        
+        /* Уменьшение отступов карточек */
+        .dish-card {
+            padding: 20px 30px;
+        }
+        
+        /* Уменьшение основного отступа */
+        main {
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        
+        /* Уменьшение заголовка */
+        h1 {
+            font-size: 2rem;
+        }
+        
+        /* Вертикальное расположение кнопок формы */
+        .form-buttons {
+            flex-direction: column;
+        }
+        
+        /* Уменьшение отступов навигации */
+        nav a {
+            padding: 10px 15px;
+            font-size: 1rem;
+        }
+    }
+    /* === СТИЛИ ДЛЯ БЛОКА "ДОСТУПНЫЕ ДЛЯ ЗАКАЗА КОМБО" === */
+
+
+
+/* === БЛОК "ДОСТУПНЫЕ ДЛЯ ЗАКАЗА КОМБО" === */
+.lunch-combos {
     background-color: #fff;
     border-radius: 8px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-/* Заголовки секций */
-h2 {
-    color: #e74c3c;
-    margin-bottom: 20px;
-    font-size: 1.8rem;
+    padding: 40px 30px;
+    margin-bottom: 40px;
     text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Основной текст */
-p {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-}
-
-/* ===== СЕКЦИЯ "О НАС" ===== */
-/* Контейнер для контента о компании */
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-/* Изображение в секции "О нас" */
-.about-image {
-    width: 500px;
-    height: 300px;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-/* ===== СПИСОК ПРЕИМУЩЕСТВ ===== */
-/* Стили для списка преимуществ */
-.advantages-list {
-    list-style-type: none;
-    padding-left: 20px;
-}
-
-/* Элементы списка преимуществ */
-.advantages-list li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 25px;
-    font-size: 1.1rem;
-}
-
-/* Галочка перед элементами списка */
-.advantages-list li:before {
-    content: "✓";
-    color: #27ae60;
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-}
-
-/* ===== ТАБЛИЦЫ ===== */
-/* Стили для таблиц */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-/* Ячейки таблицы */
-th, td {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-/* Заголовки таблицы */
-th {
-    background-color: #f2f2f2;
+.lunch-combos h2 {
+    font-size: 1.9rem;
     font-weight: 700;
+    color: #e74c3c;
+    margin-bottom: 35px;
 }
 
-/* Чередование цветов строк */
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* ===== СЕТКА БЛЮД ===== */
-/* Контейнер сетки для карточек блюд */
-.dishes-grid {
+/* === СЕТКА: 3 колонки в первой строке, 3 во второй (5 комбо + десерт) === */
+.combos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 50px 60px;
+    justify-items: center;
+    align-items: start;
 }
 
-/* Карточка отдельного блюда */
-.dish-card {
-    background-color: #fff;
-    padding: 30px 40px;
-    border-radius: 35px;
-    cursor: pointer;
-    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+/* === Каждый вариант комбо === */
+.combo-card {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: all 0.3s ease;
-}
-
-/* Эффект при наведении на карточку */
-.dish-card:hover {
-    border: 2px solid tomato;
-    transform: translateY(-5px);
-}
-
-/* Эффект для кнопки при наведении на карточку */
-.dish-card:hover button {
-    background-color: #e74c3c;
-    color: white;
-}
-
-/* Изображение блюда */
-.dish-image {
-    width: 100%;
-    border-radius: 35px;
-    margin-bottom: 15px;
-}
-
-/* Цена блюда */
-.dish-price {
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-/* Название блюда */
-.dish-name {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-/* Вес/объем блюда */
-.dish-weight {
-    color: #777;
-    margin-bottom: 15px;
-}
-
-/* Кнопка добавления в заказ */
-.add-button {
-    background-color: #f1eee9;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: auto;
-    font-weight: 500;
-    transition: background-color 0.3s;
-}
-
-/* ===== ФОРМА ЗАКАЗА ===== */
-/* Основной контейнер формы */
-#order-form {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-/* Заголовок формы */
-#order-form h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #000;
-}
-
-/* Расположение формы в две колонки */
-#order-form form {
-    display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     gap: 40px;
 }
 
-/* Колонки формы */
-.order-details, .customer-info {
-    flex: 1;
-}
-
-/* Заголовки секций формы */
-.order-details h3,
-.customer-info h3 {
-    margin-bottom: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #000;
-}
-
-/* Поля ввода формы */
-#order-form label {
-    display: block;
-    margin-top: 12px;
-    margin-bottom: 5px;
-    font-size: 15px;
-    font-weight: normal;
-}
-
-/* Элементы формы */
-#order-form input,
-#order-form select,
-#order-form textarea {
-    width: 100%;
-    padding: 6px;
-    border: 1px solid #000;
-    border-radius: 0;
-    font-size: 14px;
-    box-sizing: border-box;
-}
-
-/* Текстовое поле */
-#order-form textarea {
-    resize: none;
-    height: 80px;
-}
-
-/* Чекбоксы и радиокнопки */
-#order-form input[type="checkbox"],
-#order-form input[type="radio"] {
-    width: auto;
-    margin-right: 6px;
-}
-
-/* Текст подсказок */
-#order-form .note {
-    font-size: 13px;
-    color: #777;
-    margin-top: 4px;
-}
-
-/* Контейнер для кнопок формы */
-.form-buttons {
+/* === Блюдо === */
+.combo-dish {
     display: flex;
-    gap: 15px;
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
 
-/* Кнопки формы */
-#order-form button {
-    padding: 6px 15px;
-    border: 1px solid #000;
-    background: #fff;
-    font-size: 14px;
-    cursor: pointer;
+/* === Картинки === */
+.combo-dish img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
-/* Эффект при наведении на кнопки */
-#order-form button:hover {
-    background: #f2f2f2;
+.combo-dish img:hover {
+    transform: translateY(-5px) scale(1.05);
 }
 
-/* ===== ПОДВАЛ САЙТА ===== */
-footer {
-    background-color: black;
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
-    margin-top: auto;
-}
-
-/* Ссылки в подвале */
-footer a {
-    color: #e74c3c;
-    text-decoration: none;
+/* === Подписи === */
+.combo-dish p {
+    font-size: 16px;
     font-weight: 500;
-}
-
-/* Эффект при наведении на ссылки в подвале */
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Примечание о доставке */
-.delivery-note {
-    display: block;
-    font-size: 0.85rem;
-    color: #666;
-    margin-top: 5px;
-    font-style: italic;
-}
-
-/* Эффект при наведении на примечание */
-.dish-card:hover .delivery-note {
-    color: #e74c3c;
-}
-
-/* ===== СТИЛИ ДЛЯ ФИЛЬТРОВ ===== */
-.filters {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-}
-
-.filter-btn {
-    padding: 8px 16px;
-    border: 2px solid #e74c3c;
-    background-color: white;
-    color: #e74c3c;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.filter-btn:hover {
-    background-color: #fff0f0;
-    transform: translateY(-2px);
-}
-
-.filter-btn.active {
-    background-color: #e74c3c;
-    color: white;
-}
-
-/* ===== СТИЛИ ДЛЯ ЛАБОРАТОРНОЙ РАБОТЫ 4 ===== */
-
-/* Контейнер для страницы ланча */
-.lunch-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Секции категорий */
-.category-section {
-    margin-bottom: 40px;
-}
-
-/* Выделение выбранной карточки */
-.dish-card.selected {
-    border: 2px solid #e74c3c;
-    background-color: #fff0f0;
-    transform: translateY(-5px);
-}
-
-.dish-card.selected .add-button {
-    background-color: #e74c3c;
-    color: white;
-}
-
-/* Стили для корзины заказа */
-#order-summary {
-    background: #f9f9f9;
-    padding: 25px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    border: 1px solid #ddd;
-}
-
-.order-item {
-    margin-bottom: 15px;
-    padding: 12px;
-    background: white;
-    border-radius: 8px;
-    border-left: 4px solid #e74c3c;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.order-item strong {
     color: #333;
-    font-size: 1.1em;
+    margin: 0;
 }
 
-.empty-order {
-    text-align: center;
-    color: #666;
+/* === Десерт справа во второй строке === */
+.dessert-note {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.dessert-note img {
+    width: 60px;
+    height: 60px;
+}
+
+.dessert-note p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+}
+
+.dessert-note span {
+    font-size: 14px;
+    color: #555;
     font-style: italic;
-    padding: 30px;
-    font-size: 1.1em;
-}
-
-.total-price {
-    font-size: 1.3em;
-    font-weight: bold;
-    text-align: right;
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 2px solid #ddd;
-    color: #e74c3c;
-}
-
-/* ===== АДАПТИВНОСТЬ ДЛЯ ПЛАНШЕТОВ (800px и меньше) ===== */
-@media (max-width: 800px) {
-    /* Сетка блюд - 2 колонки */
-    .dishes-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    /* Уменьшение изображения в секции "О нас" */
-    .about-image {
-        width: 400px;
-    }
-    
-    /* Форма в одну колонку */
-    #order-form form {
-        flex-direction: column;
-    }
-}
-
-/* ===== АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (768px и меньше) ===== */
-@media (max-width: 800px) {
-    /* НАВИГАЦИЯ: горизонтальная становится вертикальной колонкой */
-    nav {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        max-width: 250px;
-    }
-    
-    /* Ссылки занимают всю ширину контейнера */
-    nav a {
-        text-align: center;
-        padding: 12px 20px;
-        border: 1px solid #534b4b;
-        width: 100%;
-        white-space: normal;
-    }
-    
-    /* Эффект при наведении на мобильных */
-    nav a:hover {
-        background-color: #f9f2f2;
-        transform: none;
-    }
-}
-
-/* ===== АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (600px и меньше) ===== */
-@media (max-width: 600px) {
-    /* Сетка блюд - 1 колонка */
-    .dishes-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    /* Вертикальное расположение контента "О нас" */
-    .about-content {
-        flex-direction: column;
-    }
-    
-    /* Полная ширина для изображения */
-    .about-image {
-        width: 100%;
-        height: auto;
-    }
-    
-    /* Уменьшение отступов секций */
-    section {
-        padding: 20px;
-    }
-    
-    /* Адаптация формы заказа */
-    #order-form {
-        margin: 20px auto;
-        padding: 15px;
-    }
-    
-    /* Навигация занимает всю доступную ширину */
-    nav {
-        max-width: 100%;
-    }
-
-    /* Адаптивность для фильтров */
-    .filters {
-        gap: 5px;
-    }
-    
-    .filter-btn {
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-}
-
-/* ===== АДАПТИВНОСТЬ ДЛЯ МАЛЕНЬКИХ ЭКРАНОВ (400px и меньше) ===== */
-@media (max-width: 400px) {
-    /* Уменьшение шрифта таблицы */
-    table {
-        font-size: 14px;
-    }
-    
-    /* Уменьшение отступов ячеек */
-    th, td {
-        padding: 8px 10px;
-    }
-    
-    /* Уменьшение отступов карточек */
-    .dish-card {
-        padding: 20px 30px;
-    }
-    
-    /* Уменьшение основного отступа */
-    main {
-        margin: 20px auto;
-        padding: 0 15px;
-    }
-    
-    /* Уменьшение заголовка */
-    h1 {
-        font-size: 2rem;
-    }
-    
-    /* Вертикальное расположение кнопок формы */
-    .form-buttons {
-        flex-direction: column;
-    }
-    
-    /* Уменьшение отступов навигации */
-    nav a {
-        padding: 10px 15px;
-        font-size: 1rem;
-    }
 }
